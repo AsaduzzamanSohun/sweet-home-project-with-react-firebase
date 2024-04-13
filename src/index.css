@@ -1,3 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Leckerli+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Leckerli+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Niconne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Leckerli+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Niconne&family=Norican&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.font-leckerli-one {
+    font-family: "Leckerli One", cursive;
+};
+
+.font-montserrat {
+    font-family: "Montserrat", sans-serif;
+}
+
+.font-charm {
+    font-family: "Charm", cursive;
+}
+
+.font-niconne{
+    font-family: "Niconne", cursive;
+}
+
+.font-norican {
+    font-family: "Norican", cursive;
+  }
+
+
+.color-dark{
+    color: #6ee2ff;
+}
+.color-bricks{
+    color: #F14B00;
+}
+.color-brown{
+    color: #AC6635;
+}
+.color-light{
+    color: #EBE6EE;
+}
+
+.btn-gradient-1 {
+    border-width: 4px;
+    border-style: solid;
+    border-top: 1px ;
+    border-right: 1px;
+    border-left: 1px;
+    border-image: linear-gradient(to right, #F14B00, #AC6635) 1;
+  }

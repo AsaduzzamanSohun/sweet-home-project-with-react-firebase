@@ -1,9 +1,12 @@
+import "./Home.css"
+import loading from '../../assets/loading/dwelling-spot-bg.gif'
 
 const Home = () => {
     return (
-        <div>
-            <h1>Welcome to DwellingSpot</h1>
-        </div>
+        <main className="font-montserrat bg-slate-400">
+            <span className='text-6xl'>Welcome to DwellingSpot</span>
+            <img src={loading} alt="" />
+        </main>
     );
 };
 
