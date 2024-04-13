@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Leckerli+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Leckerli+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Niconne&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Leckerli+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Niconne&family=Norican&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
 
 
 @tailwind base;
@@ -11,7 +12,9 @@
 
 .font-leckerli-one {
     font-family: "Leckerli One", cursive;
-};
+}
+
+;
 
 .font-montserrat {
     font-family: "Montserrat", sans-serif;
@@ -21,33 +24,88 @@
     font-family: "Charm", cursive;
 }
 
-.font-niconne{
+.font-niconne {
     font-family: "Niconne", cursive;
 }
 
 .font-norican {
     font-family: "Norican", cursive;
+}
+
+.font-alegreya {
+    font-family: "Alegreya", serif;
   }
 
 
-.color-dark{
-    color: #6ee2ff;
+.color-sky {
+    color: #00A9FF;
 }
-.color-bricks{
-    color: #F14B00;
+
+.color-light-sky {
+    color: #AED2FF;
 }
-.color-brown{
-    color: #AC6635;
+
+.color-cyan {
+    color: #00d5ff;
 }
-.color-light{
-    color: #EBE6EE;
+
+.color-sky-bright {
+    color: #00eeff;
+}
+
+.color-cyan-light {
+    color: #B6FFFA;
+}
+
+.color-cyan-dark {
+    color: #15F5BA;
+}
+
+.color-sky-blue {
+    color: #00d9ff;
+}
+
+.color-blue {
+    color: #5356FF;
+}
+
+.color-blue-dark {
+    color: #1D24CA;
+}
+
+.color-blue-light {
+    color: #687EFF;
+}
+
+.color-light {
+    color: #EEF5FF;
+}
+
+.color-black {
+    color: #200E3A;
+}
+
+.color-dark {
+    color: #191919;
+}
+
+.color-yellow {
+    color: #ffe600;
+}
+
+.color-green {
+    color: #9ADE7B;
+}
+
+.color-dark-green {
+    color: #163020;
 }
 
 .btn-gradient-1 {
     border-width: 4px;
     border-style: solid;
-    border-top: 1px ;
+    border-top: 1px;
     border-right: 1px;
     border-left: 1px;
-    border-image: linear-gradient(to right, #F14B00, #AC6635) 1;
-  }
+    border-image: linear-gradient(to right, #00eeff, #00A9FF) 1;
+}
