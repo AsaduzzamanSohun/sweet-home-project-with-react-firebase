@@ -1,21 +1,30 @@
 .animate-gradient {
-    background-size: 300%;
-    -webkit-animation: animatedgradient 20s ease infinite alternate;
-    -moz-animation: animatedgradient 20s ease infinite alternate;
-    animation: animatedgradient 20s ease infinite alternate;
+  background-size: 300%;
+  -webkit-animation: animatedgradient 20s ease infinite alternate;
+  -moz-animation: animatedgradient 20s ease infinite alternate;
+  animation: animatedgradient 20s ease infinite alternate;
+}
+
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
   }
 
-  
-  @keyframes animatedgradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+  50% {
+    background-position: 100% 50%;
   }
 
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
+.bg-glass {
+  /* From https://css.glass */
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.2px);
+  -webkit-backdrop-filter: blur(4.2px);
+}

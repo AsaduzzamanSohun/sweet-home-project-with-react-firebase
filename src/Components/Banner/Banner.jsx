@@ -23,32 +23,32 @@ const Banner = () => {
                 }}
                 navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
-                className="mySwiper"
+                className=""
             >
-                <SwiperSlide>
-                    {<img src="https://i.ibb.co/xhnXNT8/apartment-slide.jpg"></img>}
+                <SwiperSlide className=' h-[1080px]'>
+                    {<img className='w-full h-[1080px]' src="https://i.ibb.co/xhnXNT8/apartment-slide.jpg"></img>}
                 </SwiperSlide>
                 <SwiperSlide>
-                    {<img src="https://i.ibb.co/6n4gJNR/apartment-8.jpg"></img>}
+                    {<img className='w-full h-[1080px]' src="https://i.ibb.co/6n4gJNR/apartment-8.jpg"></img>}
                 </SwiperSlide>
                 <SwiperSlide>
-                    {<img src="https://i.ibb.co/FBKBfGX/house-10.jpg"></img>}</SwiperSlide>
-                <SwiperSlide>{<img src="https://i.ibb.co/h8T3SMG/student-housing-slide.jpg"></img>}
+                    {<img className='w-full h-[1080px]' src="https://i.ibb.co/FBKBfGX/house-10.jpg"></img>}</SwiperSlide>
+                <SwiperSlide>{<img className='w-full h-[1080px]' src="https://i.ibb.co/h8T3SMG/student-housing-slide.jpg"></img>}
                 </SwiperSlide>
                 <SwiperSlide>
-                    {<img src="https://i.ibb.co/L1kQ0Xd/vacation-rentals-3.jpg"></img>}
+                    {<img className='w-full h-[1080px]' src="https://i.ibb.co/L1kQ0Xd/vacation-rentals-3.jpg"></img>}
                 </SwiperSlide>
                 <SwiperSlide>
-                    {<img src="https://i.ibb.co/Tk0BgDS/single-family-house-4.jpg"></img>}
+                    {<img className='w-full h-[1080px]' src="https://i.ibb.co/Tk0BgDS/single-family-house-4.jpg"></img>}
                 </SwiperSlide>
                 <SwiperSlide>
-                    {<img src="https://i.ibb.co/XkqV5gm/house-6.jpg"></img>}
+                    {<img className='w-full h-[1080px]' src="https://i.ibb.co/XkqV5gm/house-6.jpg"></img>}
                 </SwiperSlide>
                 <SwiperSlide>
-                    {<img src="https://i.ibb.co/wwG8Yg8/apartment-7.jpg"></img>}
+                    {<img className='w-full h-[1080px]' src="https://i.ibb.co/wwG8Yg8/apartment-7.jpg"></img>}
                 </SwiperSlide>
                 <SwiperSlide>
-                    {<img src="https://i.ibb.co/vjstGwp/apartment-2.jpg"></img>}
+                    {<img className='w-full h-[1080px]' src="https://i.ibb.co/vjstGwp/apartment-2.jpg"></img>}
                 </SwiperSlide>
             </Swiper>
         </div>
