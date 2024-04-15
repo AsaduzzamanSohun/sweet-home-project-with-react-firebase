@@ -1,10 +1,18 @@
 import "./Home.css"
-import Banner from "../../Components/Banner/Banner";
+import Slider from "../../Components/Slider/Slider";
+import RealEstates from "../../Components/RealEstates/RealEstates";
+import { useEffect } from "react";
 
 const Home = () => {
+
+    useEffect(() => {
+        document.title = "Home"
+    } , [])
+
     return (
-        <main className="font-charm">
-            <Banner></Banner>
+        <main>
+            <Slider></Slider>
+            <RealEstates></RealEstates>
         </main>
     );
 };

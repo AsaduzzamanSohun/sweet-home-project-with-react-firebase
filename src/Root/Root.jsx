@@ -4,11 +4,8 @@ import Footer from "../Shared/Footer/Footer";
 
 const Root = () => {
     return (
-        <div className="font-alegreya relative">
-            <div className="bg-transparent snap-both fixed z-50 min-w-full">
-                <Navbar></Navbar>
-            </div>
-
+        <div className="font-alegreya">
+            <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>
         </div>

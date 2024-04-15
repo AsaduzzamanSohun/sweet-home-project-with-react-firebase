@@ -1,0 +1,157 @@
+[
+    {
+        "image": "https://i.ibb.co/LpRsy9z/house-6.png",
+        "estate_title": "Cozy Family Home",
+        "id": 1,
+        "segment_name": "Single-family home",
+        "description": "Charming single-family home with spacious living areas, backyard, and garage.",
+        "price": "$300,000",
+        "status": "sale",
+        "area": "1800 sq ft",
+        "location": "1234 Maple Street, Dilworth",
+        "facilities": [
+            "living room",
+            "backyard",
+            "garage"
+        ],
+        "details": "Discover comfort and style in this charming single-family home. With spacious living areas, a beautiful backyard, and modern amenities, it's perfect for family living. Conveniently located near schools, parks, and shopping centers, this home offers a serene environment for relaxation and convenience for everyday life. The classic design elements combined with contemporary comforts create a warm and inviting atmosphere. Whether hosting gatherings or enjoying quiet evenings, this home provides the ideal backdrop. Embrace the joy of homeownership in this cozy abode situated in a friendly neighborhood, offering the perfect blend of comfort and style for your family's needs."
+    },
+    {
+        "image": "https://i.ibb.co/Jcyz3mK/house-18.png",
+        "estate_title": "Luxury Downtown Apartment",
+        "id": 2,
+        "segment_name": "Apartment",
+        "description": "Exquisite downtown apartment with stunning city views, gym, and swimming pool.",
+        "price": "$2,500/month",
+        "status": "rent",
+        "area": "1200 sq ft",
+        "location": "5678 Elm Street, Uptown",
+        "facilities": [
+            "living room",
+            "gym",
+            "swimming pool"
+        ],
+        "details": "Indulge in luxury with this downtown apartment boasting breathtaking city views, a gym, and a swimming pool. Perfectly located for urban living, with fine dining and entertainment at your doorstep. This exquisite residence offers not only a lavish lifestyle but also convenience and accessibility. The spacious living area provides ample space for entertaining guests, while the gourmet kitchen is a culinary enthusiast's dream. Unwind in style and comfort, taking advantage of the on-site gym or enjoying a refreshing swim in the pool. Live at the center of it all, where every amenity and attraction is within reach, making every day an experience in urban sophistication."
+    },
+    {
+        "image": "https://i.ibb.co/HHTrDJx/house-13.png",
+        "estate_title": "Modern Townhouse",
+        "id": 3,
+        "segment_name": "Townhouse",
+        "description": "Sleek townhouse with contemporary design, rooftop terrace, and garage.",
+        "price": "$400,000",
+        "status": "sale",
+        "area": "2200 sq ft",
+        "location": "9101 Oak Lane, Plaza Midwood",
+        "facilities": [
+            "living room",
+            "rooftop terrace",
+            "garage"
+        ],
+        "details": "Experience modern living in this sleek townhouse featuring contemporary design, a rooftop terrace, and premium finishes. Located in a vibrant neighborhood with easy access to shopping, dining, and entertainment. This stylish residence offers not just a place to live but a lifestyle. The open-concept layout creates a seamless flow between spaces, perfect for both entertaining and everyday living. Step outside to the rooftop terrace and enjoy panoramic views of the surrounding cityscape, creating a tranquil retreat in the heart of the urban center. With its prime location and sophisticated features, this townhouse embodies the essence of modern urban living."
+    },
+    {
+        "image": "https://i.ibb.co/LpRsy9z/house-6.png",
+        "estate_title": "Traditional Family Home",
+        "id": 4,
+        "segment_name": "Single-family home",
+        "description": "Classic family home with timeless design, backyard, and basement.",
+        "price": "$250,000",
+        "status": "sale",
+        "area": "1600 sq ft",
+        "location": "3456 Pine Avenue, South End",
+        "facilities": [
+            "living room",
+            "backyard",
+            "basement"
+        ],
+        "details": "Step into classic elegance with this traditional family home offering timeless design, a spacious backyard, and a basement. Conveniently located near schools, parks, and shopping centers, it's the epitome of family living. The spacious living areas provide plenty of room for gatherings and everyday activities, while the large backyard offers space for outdoor enjoyment and relaxation. With modern amenities seamlessly integrated into its traditional charm, this home offers the perfect balance of comfort and sophistication. Whether starting a family or looking for a peaceful retreat, this home provides a warm and inviting atmosphere for creating lasting memories."
+    },
+    {
+        "image": "https://i.ibb.co/LpZKff3/house-17.png",
+        "estate_title": "City View Penthouse",
+        "id": 5,
+        "segment_name": "Apartment",
+        "description": "Stunning penthouse with panoramic city views, terrace, gym, and swimming pool.",
+        "price": "$5,000/month",
+        "status": "rent",
+        "area": "2000 sq ft",
+        "location": "7890 Walnut Avenue, Fourth Ward",
+        "facilities": [
+            "living room",
+            "terrace",
+            "gym",
+            "swimming pool"
+        ],
+        "details": "Live in luxury with this stunning penthouse offering panoramic city views, a terrace, gym, and swimming pool. Prime location with easy access to dining, entertainment, and cultural attractions. This exceptional residence combines sophistication with comfort, providing a lavish living experience at the heart of the city. The expansive living space is perfect for entertaining guests, while the gourmet kitchen is a chef's delight with its high-end appliances and sleek design. Retreat to the private terrace overlooking the city lights, or take a dip in the rooftop swimming pool, indulging in the epitome of urban elegance and convenience."
+    },
+    {
+        "image": "https://i.ibb.co/fpf3sjv/house-15.png",
+        "estate_title": "Urban Townhouse",
+        "id": 6,
+        "segment_name": "Townhouse",
+        "description": "Stylish townhouse with modern design, rooftop deck, and garage.",
+        "price": "$450,000",
+        "status": "sale",
+        "area": "1800 sq ft",
+        "location": "2345 Cherry Street, Elizabeth",
+        "facilities": [
+            "living room",
+            "rooftop deck",
+            "garage"
+        ],
+        "details": "Embrace luxurious city living in this stylish townhouse with modern design, a rooftop deck, and a garage. Enjoy vibrant urban surroundings with shopping, dining, and entertainment options nearby. This contemporary residence offers more than just a place to live; it offers a lifestyle of sophistication and convenience. The spacious living areas are bathed in natural light, creating an inviting atmosphere for relaxation and entertainment. Step outside to the private rooftop deck and enjoy panoramic views of the city skyline, creating the perfect backdrop for socializing or quiet reflection. With its prime location and upscale features, this townhouse is the epitome of modern urban living."
+    },
+    {
+        "image": "https://i.ibb.co/fpf3sjv/house-15.png",
+        "estate_title": "Spacious Family Retreat",
+        "id": 7,
+        "segment_name": "Single-family home",
+        "description": "Expansive family retreat with open-concept living, backyard, basement, and study.",
+        "price": "$350,000",
+        "status": "sale",
+        "area": "2400 sq ft",
+        "location": "6789 Oak Street, NoDa",
+        "facilities": [
+            "living room",
+            "backyard",
+            "basement",
+            "study"
+        ],
+        "details": "Escape to your own private oasis with this spacious family retreat offering open-concept living, a backyard, basement, and study. Enjoy modern amenities and a serene neighborhood close to schools and parks. This expansive residence provides ample space for the whole family to spread out and relax. The open-concept living areas are perfect for entertaining, while the large backyard offers endless opportunities for outdoor fun and relaxation. With its modern amenities and thoughtful design, this home strikes the perfect balance between comfort and style, providing the ideal backdrop for creating lasting memories with loved ones."
+    },
+    {
+        "image": "https://i.ibb.co/7yhXYTj/house-12.png",
+        "estate_title": "Modern City Apartment",
+        "id": 8,
+        "segment_name": "Apartment",
+        "description": "Modern city apartment with spacious living, gym, and swimming pool.",
+        "price": "$3,000/month",
+        "status": "rent",
+        "area": "1000 sq ft",
+        "location": "123 Main Street, Midtown",
+        "facilities": [
+            "living room",
+            "gym",
+            "swimming pool"
+        ],
+        "details": "Experience urban living at its best in this modern city apartment featuring spacious living, a gym, and a swimming pool. Prime location in the bustling downtown area with easy access to amenities. This stylish apartment offers not only a comfortable living space but also access to a range of amenities designed to enhance your lifestyle. The spacious living area provides plenty of room for relaxation and entertaining, while the sleek kitchen features high-end appliances and finishes. Take advantage of the on-site amenities, including a state-of-the-art gym and swimming pool, providing the perfect balance between work and leisure in the heart of the city."
+    },
+    {
+        "image": "https://i.ibb.co/2sNv4Vc/house-5.png",
+        "estate_title": "Chic Townhouse Living",
+        "id": 9,
+        "segment_name": "Townhouse",
+        "description": "Stylish townhouse with spacious living, terrace, and garage.",
+        "price": "$380,000",
+        "status": "sale",
+        "area": "2000 sq ft",
+        "location": "4567 Chestnut Street, SouthPark",
+        "facilities": [
+            "living room",
+            "terrace",
+            "garage"
+        ],
+        "details": "Elevate your lifestyle with chic townhouse living in this stylish residence featuring spacious living, a terrace, and a garage. Enjoy modern amenities and a prime location in the heart of SouthPark. This contemporary townhouse offers more than just a place to live; it offers a lifestyle of luxury and convenience. The spacious living areas are flooded with natural light, creating a warm and inviting atmosphere for relaxation and entertainment. Step outside to the private terrace and enjoy views of the surrounding cityscape, or retreat to the luxurious master suite for a peaceful night's sleep. With its convenient location and upscale features, this townhouse is the epitome of modern city living."
+    }
+]

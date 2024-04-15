@@ -7,26 +7,34 @@ const Navbar = () => {
     const link = <>
 
         <li>
-            <NavLink className={({ isActive }) => isActive ? 'border-b-2 btn-gradient-1 color-blue-light  px-2' : "bg-transparent color-sky"} to="/">Home</NavLink>
+            <NavLink id="link" className={({ isActive }) => isActive ? 'border-b-2 btn-gradient-1 color-blue-light  px-2' : "bg-transparent color-sky px-2"} to="/">
+                Home
+            </NavLink>
         </li>
         <li>
-            <NavLink className={({ isActive }) => isActive ? 'border-b-2 rounded-none btn-gradient-1 color-blue-light ' : "bg-transparent color-sky"} to="/update-profile">Update Profile</NavLink>
+            <NavLink className={({ isActive }) => isActive ? 'border-b-2 rounded-none btn-gradient-1 color-blue-light px-2' : "bg-transparent color-sky px-2"} to="/update-profile">
+                Update Profile
+            </NavLink>
         </li>
         <li>
-            <NavLink className={({ isActive }) => isActive ? 'border-b-2 btn-gradient-1 color-blue-light ' : "bg-transparent color-sky"} to="/about">About Us</NavLink>
+            <NavLink className={({ isActive }) => isActive ? 'border-b-2 btn-gradient-1 color-blue-light px-2' : "bg-transparent color-sky px-2"} to="/about">
+                About Us
+            </NavLink>
         </li>
         <li>
-            <NavLink className={({ isActive }) => isActive ? 'border-b-2 btn-gradient-1 color-blue-light  px-2' : "bg-transparent color-sky"} to="/contact">Contact Us</NavLink>
+            <NavLink className={({ isActive }) => isActive ? 'border-b-2 btn-gradient-1 color-blue-light  px-2' : "bg-transparent color-sky px-2"} to="/contact">
+                Contact Us
+            </NavLink>
         </li>
         <li className="md:hidden">
-            <a className="btn px-8 bg-[#5356FF] color-light hover:opacity-75 hover:rounded-3xl hover:bg-[#1D24CA] transition-all duration-500 text-xl">Login</a>
+            <a className="btn px-8 bg-[#5356FF] color-light hover:opacity-75 hover:rounded-3xl hover:bg-[#1D24CA] transition-all duration-500 text-xl">
+                Login
+            </a>
         </li>
-
     </>
 
-
     return (
-        <nav className="bg-white max-w-[1440px] mx-auto bg-glass">
+        <nav className="bg-white max-w-[1440px] mx-auto">
             <div className="navbar ">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -40,14 +48,15 @@ const Navbar = () => {
                         </ul>
                     </div>
 
+
                     <div className="flex items-center">
                         <img className="w-12 md:w-16" src={logo1} alt="" />
 
-                        <span className=''>
+                        <p className=''>
                             <Link className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-[#00d5ff] via-[#00A9FF] to-[#1D24CA] text-transparent bg-clip-text animate-gradient h-full font-leckerli-one hover:opacity-75 transition-all duration-500">
-                                DwellingSpot
+                                SweetHome
                             </Link>
-                        </span>
+                        </p>
                     </div>
 
                 </div>
