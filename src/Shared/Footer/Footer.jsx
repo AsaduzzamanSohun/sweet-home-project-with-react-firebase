@@ -1,7 +1,7 @@
 
 const Footer = () => {
     return (
-        <footer className="py-6 dark:bg-gray-100 dark:text-gray-900">
+        <footer className="py-6 bg-indigo-300 dark:bg-gray-100 dark:text-gray-900">
             <div className="container px-6 mx-auto space-y-6 divide-y dark:divide-gray-600 md:space-y-12 divide-opacity-50">
                 <div className="grid grid-cols-12">
                     <div className="pb-6 col-span-full md:pb-0 md:col-span-6">
@@ -23,15 +23,8 @@ const Footer = () => {
                             <li>
                                 <a rel="noopener noreferrer" href="#" className="hover:dark:text-violet-600">Link</a>
                             </li>
-                            <li>
-                                <a rel="noopener noreferrer" href="#" className="hover:dark:text-violet-600">Link</a>
-                            </li>
-                            <li>
-                                <a rel="noopener noreferrer" href="#" className="hover:dark:text-violet-600">Link</a>
-                            </li>
-                            <li>
-                                <a rel="noopener noreferrer" href="#" className="hover:dark:text-violet-600">Link</a>
-                            </li>
+
+
                         </ul>
                     </div>
                     <div className="col-span-6 text-center md:text-left md:col-span-3">
@@ -43,15 +36,7 @@ const Footer = () => {
                             <li>
                                 <a rel="noopener noreferrer" href="#" className="hover:dark:text-violet-600">Link</a>
                             </li>
-                            <li>
-                                <a rel="noopener noreferrer" href="#" className="hover:dark:text-violet-600">Link</a>
-                            </li>
-                            <li>
-                                <a rel="noopener noreferrer" href="#" className="hover:dark:text-violet-600">Link</a>
-                            </li>
-                            <li>
-                                <a rel="noopener noreferrer" href="#" className="hover:dark:text-violet-600">Link</a>
-                            </li>
+
                         </ul>
                     </div>
                 </div>

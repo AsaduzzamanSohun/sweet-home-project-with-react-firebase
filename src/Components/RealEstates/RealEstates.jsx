@@ -64,7 +64,7 @@ const RealEstates = () => {
 
                 </div> */}
 
-                <div className='grid md:grid-cols-3 gap-8'>
+                <div className='grid md:grid-cols-3 gap-8 mb-24'>
                     {
                         realEstateData.map(realEstate => <RealEstate
                             key={realEstate.id}
