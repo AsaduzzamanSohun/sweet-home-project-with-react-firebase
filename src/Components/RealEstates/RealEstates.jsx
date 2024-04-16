@@ -1,10 +1,16 @@
 import { useEffect } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import 'animate.css';
+import { useLoaderData } from 'react-router-dom';
+import RealEstate from '../../Layouts/RealEstate/RealEstate';
 
 
 
 const RealEstates = () => {
+
+    const realEstateData = useLoaderData()
+
+    console.log('real estates: ', realEstateData);
 
     useEffect(() => {
         document.title = "Real Estates"
@@ -28,9 +34,9 @@ const RealEstates = () => {
 
             <div>
 
-                <div className='w-96 bg-slate-200 border-2'>
+                {/* <div className='w-96 bg-slate-200 border-2 transition-all'>
                     <div>
-                        <img className='w-full hover:scale-105 transition-all duration-1000 overflow-hidden' src="https://i.ibb.co/2sNv4Vc/house-5.png" alt="" />
+                        <img className='w-full hover:scale-110 transition-all duration-1000 overflow-hidden' src="https://i.ibb.co/2sNv4Vc/house-5.png" alt="" />
                     </div>
 
                     <div className='bg-slate-50'>
@@ -53,10 +59,19 @@ const RealEstates = () => {
 
                     <div className='flex justify-between px-4 py-2'>
                         <span>location</span>
-                        <button className='font-light bg-slate-400 px-3 text-zinc-100 animate__animated animate__pulse animate__infinite animate__slow animate__delay-5s'>{`see details ->`}</button>
+                        <button className='font-light bg-stone-500 hover:text-blue-700 hover:font-bold px-3 text-zinc-100 animate__animated animate__pulse animate__infinite animate__slow hover:skeleton'>{`see details ->`}</button>
                     </div>
 
+                </div> */}
+
+                <div className='grid md:grid-cols-3 gap-8'>
+                    {
+                        realEstateData.map(realEstate => <RealEstate
+                            key={realEstate.id}
+                            realEstate={realEstate} ></RealEstate>)
+                    }
                 </div>
+
 
 
 
