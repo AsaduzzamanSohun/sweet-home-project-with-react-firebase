@@ -68,7 +68,13 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end hidden md:inline-flex">
-                    <Link to="/login" className="btn px-8 bg-[#5356FF] color-light hover:opacity-75 hover:rounded-3xl hover:bg-[#1D24CA] transition-all duration-500 text-xl ring-2 ring-pink-300 ring-inset">Login</Link>
+                    <Link to="/login">
+                        <button className="btn rounded-none px-8 bg-[#68E1FD] text-white font-semibold text-lg hover:bg-transparent hover:text-[#68E1FD] hover:border-[#68E1FD] duration-700 hover:rounded-3xl transition-all">
+                            Login
+                        </button>
+                    </Link>
+
+
                 </div>
             </div>
         </nav>

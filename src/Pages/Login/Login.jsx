@@ -6,6 +6,17 @@ import { Link } from "react-router-dom";
 
 
 const Login = () => {
+
+    const handleLogin = e => {
+        e.preventDefault();
+
+        const form = new FormData(e.currentTarget);
+        const email = form.get("email");
+        const password = form.get("password");
+
+        console.log(email, password);
+    }
+    
     return (
         <div className="max-w-[1440px] mx-auto min-h-[calc(100vh-80px-241px)] flex items-center">
 
@@ -20,7 +31,7 @@ const Login = () => {
                         <h1 className="md:text-4xl">Hello, Welcome</h1>
                     </div>
 
-                    <form className="flex flex-col rounded-xl md:px-12 py-16">
+                    <form onSubmit={handleLogin} className="flex flex-col rounded-xl md:px-12 py-16">
 
                         <label className="text-lg px-2 py-1" htmlFor="email">Email</label>
                         <input className="bg-slate-100 px-6 py-3 placeholder-slate-500 border-0 focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1" type="email" name="email" id="email" placeholder="Enter Address" />
