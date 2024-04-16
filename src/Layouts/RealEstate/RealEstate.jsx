@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 
-const RealEstate = ({realEstate}) => {
+const RealEstate = ({ realEstate }) => {
 
-    const {image, estate_title, segment_name, description, price, status, area, location} = realEstate;
+    const { id, image, estate_title, segment_name, description, price, status, area, location } = realEstate;
 
     return (
         <div className='w-96 bg-slate-200 border-2 transition-all'>
@@ -31,7 +32,10 @@ const RealEstate = ({realEstate}) => {
 
             <div className='flex justify-between px-4 py-2'>
                 <span>{location}</span>
-                <button className='font-light bg-stone-500 hover:text-blue-700 hover:font-bold px-3 text-zinc-100 animate__animated animate__pulse animate__infinite animate__slow hover:skeleton duration-500 transition-all'>{`see details ->`}</button>
+                <Link to={`/${id}`}>
+                    <button className='font-light bg-stone-500 hover:text-blue-700 hover:font-bold px-3 text-zinc-100 animate__animated animate__pulse animate__infinite animate__slow hover:skeleton duration-500 transition-all'>{`see details ->`}</button>
+                </Link>
+
             </div>
 
         </div>
