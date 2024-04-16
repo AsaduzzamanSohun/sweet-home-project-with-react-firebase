@@ -38,14 +38,14 @@ const Login = () => {
                             <div className="flex text-3xl justify-center gap-4 mt-4">
                                 <Link to=""><FcGoogle className="hover:scale-110 duration-700" /></Link>
                                 <Link to=""><FaGithub className="hover:scale-110 duration-700" /></Link>
-                                
-                                
                             </div>
                         </div>
-
-
-
+                        <div className="text-center text-sm mt-4"> 
+                            <p>Are you new here? <Link className="font-bold text-[#68E1FD]" to="/register">Register</Link> now!</p>
+                        </div>
                     </form>
+
+
 
                 </div>
 
