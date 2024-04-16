@@ -37,7 +37,7 @@ const RealEstate = ({ realEstate }) => {
                     <button className='bg-green-300 text-black 
                     hover:text-blue-700 hover:font-bold px-4 py-1 
                     animate__animated animate__pulse animate__infinite animate__slow 
-                    hover:skeleton transition-all'>
+                    hover:skeleton transition-all ring-2 ring-pink-300 ring-inset'>
                         <span className='text-xs'>
                             View Property
                         </span>  

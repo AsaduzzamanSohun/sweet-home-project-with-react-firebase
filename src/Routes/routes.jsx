@@ -5,6 +5,7 @@ import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 import AboutUs from "../Pages/AboutUs/AboutUs";
 import ContactUs from "../Pages/ContactUs/ContactUs";
 import PropertyDetail from "../Pages/PropertyDetail/PropertyDetail";
+import Login from "../Pages/Login/Login";
 
 const router = createBrowserRouter([
     {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
                 path: '/:id',
                 element: <PropertyDetail></PropertyDetail>,
                 loader: () => fetch('estates.json')
+            },
+            {
+                path: "/login",
+                element: <Login></Login>
             }
         ]
     }

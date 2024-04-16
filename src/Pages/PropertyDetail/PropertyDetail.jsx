@@ -1,6 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { HiArrowLongRight } from "react-icons/hi2";
 import 'animate.css';
+import { FcOk } from "react-icons/fc";
 
 
 
@@ -49,7 +50,9 @@ const PropertyDetail = () => {
                                 {
                                     facilities.map((facility, idx) => <li
                                         key={idx}
+                                        className="flex items-center gap-2"
                                     >
+                                        <FcOk className="text-xs"></FcOk>
                                         {facility}
                                     </li>)
                                 }
@@ -58,10 +61,14 @@ const PropertyDetail = () => {
 
                         <div>
                             <p className="font-semibold">{segment_name}:</p>
-                            <p>Area: {area}</p>
+                            <p> Area: {area}</p>
                             <p>Status: {status}</p>
                             <p>Price: {price}</p>
-                            <button className="btn bg-transparent hover:bg-transparent">Buy Property <HiArrowLongRight className="animate__animated  animate__heartBeat animate__infinite text-blue-600"></HiArrowLongRight>
+                            <button className="btn bg-transparent hover:bg-transparent
+                            ring-2 ring-pink-300 ring-inset">
+                                Buy Property
+                                <HiArrowLongRight className="animate__animated  animate__heartBeat animate__infinite text-blue-600"
+                                ></HiArrowLongRight>
                             </button>
                         </div>
                     </div>

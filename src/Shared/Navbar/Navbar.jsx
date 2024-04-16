@@ -68,7 +68,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end hidden md:inline-flex">
-                    <a className="btn px-8 bg-[#5356FF] color-light hover:opacity-75 hover:rounded-3xl hover:bg-[#1D24CA] transition-all duration-500 text-xl">Login</a>
+                    <Link to="/login" className="btn px-8 bg-[#5356FF] color-light hover:opacity-75 hover:rounded-3xl hover:bg-[#1D24CA] transition-all duration-500 text-xl ring-2 ring-pink-300 ring-inset">Login</Link>
                 </div>
             </div>
         </nav>
