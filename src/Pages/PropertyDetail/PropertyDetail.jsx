@@ -2,6 +2,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { HiArrowLongRight } from "react-icons/hi2";
 import 'animate.css';
 import { FcOk } from "react-icons/fc";
+import { useEffect } from "react";
 
 
 
@@ -14,12 +15,15 @@ const PropertyDetail = () => {
 
     const { image, estate_title, segment_name, description, price, status, area, location, facilities, details } = property;
 
+    useEffect(() => {
+        document.title = "Property Details"
+    }, []);
 
 
     console.log(id);
 
     return (
-        <div data-aos="flip-left" className="max-w-[1440px] mx-auto min-h-[calc(100vh-80px-265px)] mt-6">
+        <div data-aos="flip-left" className="max-w-[1440px] mx-auto min-h-[calc(100vh-80px-226px)] mt-6">
 
 
             <div className="grid md:grid-cols-2 lg:px-44 p-4 md:space-x-12">
@@ -65,7 +69,7 @@ const PropertyDetail = () => {
                             <p>Status: {status}</p>
                             <p>Price: {price}</p>
                             <button className="btn bg-transparent hover:bg-transparent
-                            ring-2 ring-pink-300 ring-inset">
+                            ring-2 ring-sky-300 ring-inset">
                                 Buy Property
                                 <HiArrowLongRight className="animate__animated  animate__heartBeat animate__infinite text-blue-600"
                                 ></HiArrowLongRight>

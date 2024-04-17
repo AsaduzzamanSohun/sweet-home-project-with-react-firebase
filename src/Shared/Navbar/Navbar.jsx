@@ -1,6 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
 import '../Navbar/Navbar.css'
-import logo1 from '../../assets/icons/dwelling-spot-3D.gif'
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import 'react-toastify/dist/ReactToastify.css';
@@ -33,15 +32,13 @@ const Navbar = () => {
             </NavLink>
         </li>
         <li>
-            <NavLink className={({ isActive }) => isActive ? 'border-b-2 btn-gradient-1 color-blue-light px-2' : "bg-transparent color-sky px-2"} to="/about">
-                About Us
-            </NavLink>
+            {
+                user && <NavLink className={({ isActive }) => isActive ? 'border-b-2 btn-gradient-1 color-blue-light px-2' : "bg-transparent color-sky px-2"} to="/about">
+                    About Us
+                </NavLink>
+            }
         </li>
-        <li>
-            <NavLink className={({ isActive }) => isActive ? 'border-b-2 btn-gradient-1 color-blue-light  px-2' : "bg-transparent color-sky px-2"} to="/contact">
-                Contact Us
-            </NavLink>
-        </li>
+
         <li className="md:hidden">
 
             {
@@ -76,7 +73,10 @@ const Navbar = () => {
 
 
                     <div className="flex items-center">
-                        <img className="w-12 md:w-16" src={logo1} alt="" />
+                        <img
+                            className="w-12 md:w-16"
+                            src="https://i.ibb.co/KVxYBw4/dwelling-spot-3-D.gif"
+                            alt="" />
 
                         <p className=''>
                             <Link className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-[#00d5ff] via-[#00A9FF] to-[#1D24CA] text-transparent bg-clip-text animate-gradient h-full font-leckerli-one hover:opacity-75 transition-all duration-500">
@@ -94,13 +94,13 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end hidden md:inline-flex gap-2">
-                    <img alt="" 
-                    className={user ? 
-                        "w-12 h-12 rounded-full hover:cursor-pointer ring-green-500 ring-4" 
-                        : 
-                        "w-12 h-12 rounded-full"} title={user ? user.displayName : ""} src={user ?
-                        user.photoURL
-                        : "https://i.ibb.co/9WfLbkH/user.png"} />
+                    <img alt="image broken. Please reload"
+                        className={user ?
+                            "w-12 h-12 rounded-full hover:cursor-pointer ring-green-500 ring-4"
+                            :
+                            "w-12 h-12 rounded-full"} title={user ? user.displayName : ""} src={user ?
+                                user.photoURL
+                                : "https://i.ibb.co/9WfLbkH/user.png"} />
 
                     {
 
@@ -118,11 +118,7 @@ const Navbar = () => {
                                 </button>
                             </Link>
 
-
-
                     }
-
-
 
                 </div>
             </div>

@@ -3,7 +3,6 @@ import Root from "../Root/Root";
 import Home from "../Pages/Home/Home";
 import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 import AboutUs from "../Pages/AboutUs/AboutUs";
-import ContactUs from "../Pages/ContactUs/ContactUs";
 import PropertyDetail from "../Pages/PropertyDetail/PropertyDetail";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
@@ -27,11 +26,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/about",
-                element: <AboutUs></AboutUs>
-            },
-            {
-                path: "/contact",
-                element: <ContactUs></ContactUs>
+                element: <PrivateRoutes><AboutUs></AboutUs></PrivateRoutes>
             },
             {
                 path: '/:id',

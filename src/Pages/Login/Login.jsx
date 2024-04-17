@@ -1,7 +1,7 @@
 import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash, FaGithub } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -17,6 +17,10 @@ const Login = () => {
 
     const location = useLocation();
     const navigate = useNavigate();
+
+    useEffect(() => {
+        document.title = "Login"
+    }, []);
 
     const handleLogin = e => {
         e.preventDefault();
@@ -44,32 +48,25 @@ const Login = () => {
     const handleGoogleSignIn = () => {
         const googleProvider = new GoogleAuthProvider
         googleUser(googleProvider)
-            .then()
+            .then(() => {
+                notifySuccess("Login Successfully!");
+                navigate(location?.state ? location.state : "/")
+            })
             .catch()
     }
 
     const handleGitHubSignIn = () => {
         const githubProvider = new GithubAuthProvider();
         gitHubUser(githubProvider)
-            .then()
+            .then(() => {
+                notifySuccess("Login Successfully!");
+                navigate(location?.state ? location.state : "/")
+            })
             .catch()
     }
 
-
-
-
-
-
-
-
-
     return (
         <div className="max-w-[1440px] mx-auto min-h-[calc(100vh-80px-241px)] flex items-center">
-
-            <div>
-
-
-            </div>
 
             <div className="grid md:grid-cols-2 lg:mx-44 shadow-2xl shadow-sky-200">
                 <div>
