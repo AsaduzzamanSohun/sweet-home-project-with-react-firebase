@@ -1,8 +1,22 @@
 import { Link, NavLink } from "react-router-dom";
 import '../Navbar/Navbar.css'
 import logo1 from '../../assets/icons/dwelling-spot-3D.gif'
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Navbar = () => {
+
+    const { user, logout } = useContext(AuthContext);
+
+    const navLogout = () => {
+        logout()
+            .then(() => {
+
+            })
+            .catch();
+
+    }
 
     const link = <>
 
@@ -27,11 +41,27 @@ const Navbar = () => {
             </NavLink>
         </li>
         <li className="md:hidden">
-            <a className="btn px-8 bg-[#5356FF] color-light hover:opacity-75 hover:rounded-3xl hover:bg-[#1D24CA] transition-all duration-500 text-xl">
-                Login
-            </a>
+
+            {
+                user ?
+                    <Link to="/" onClick={navLogout} className="btn px-8 bg-[#5356FF] color-light hover:opacity-75 hover:rounded-3xl hover:bg-[#1D24CA] transition-all duration-500 text-xl">
+                        Logout
+                    </Link>
+                    :
+                    <Link to="/login" className="btn px-8 bg-[#5356FF] color-light hover:opacity-75 hover:rounded-3xl hover:bg-[#1D24CA] transition-all duration-500 text-xl">
+                        Login
+                    </Link>
+            }
+
+
         </li>
     </>
+
+
+
+  
+
+
 
     return (
         <nav className="bg-white max-w-[1440px] mx-auto">
@@ -67,12 +97,31 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
-                <div className="navbar-end hidden md:inline-flex">
-                    <Link to="/login">
-                        <button className="btn rounded-none px-8 bg-[#68E1FD] text-white font-semibold text-lg hover:bg-transparent hover:text-[#68E1FD] hover:border-[#68E1FD] duration-700 hover:rounded-3xl transition-all">
-                            Login
-                        </button>
-                    </Link>
+                <div className="navbar-end hidden md:inline-flex gap-2">
+                    <img alt="" className="w-12 rounded-full" src={user ?
+                        "https://i.ibb.co/RYZpjHj/pic.jpg"
+                        : "https://i.ibb.co/9WfLbkH/user.png"} />
+
+                    {
+
+                        user ?
+                            <Link to="/">
+                                <button onClick={navLogout} className="btn rounded-none px-8 bg-[#68E1FD] text-white font-semibold text-lg hover:bg-transparent hover:text-[#68E1FD] hover:border-[#68E1FD] duration-700 hover:rounded-3xl transition-all">
+                                    Logout
+                                </button>
+                            </Link>
+                            :
+
+                            <Link to="/login">
+                                <button className="btn rounded-none px-8 bg-[#68E1FD] text-white font-semibold text-lg hover:bg-transparent hover:text-[#68E1FD] hover:border-[#68E1FD] duration-700 hover:rounded-3xl transition-all">
+                                    Login Now!
+                                </button>
+                            </Link>
+
+
+
+                    }
+
 
 
                 </div>

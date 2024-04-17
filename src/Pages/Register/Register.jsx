@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { updateProfile } from "firebase/auth";
 
 
 
@@ -11,12 +12,12 @@ const Register = () => {
 
     const { createUser } = useContext(AuthContext)
 
-    const [showPassword, setShowPassword] = useState(false);
+    const [showPassword, setShowPassword] = useState(true);
 
     const [success, setSuccess] = useState('');
     const [error, setError] = useState('')
 
-    const notify = (error) => toast.error(error);
+    const notify = (error) => toast.error( error);
 
 
     const handleRegister = e => {
@@ -27,6 +28,7 @@ const Register = () => {
         const name = form.get("name");
         const email = form.get("email");
         const photo = form.get("photo")
+        console.log("photo: ", photo);
         const password = form.get("password");
         
         e.target.reset()
@@ -53,23 +55,35 @@ const Register = () => {
         console.log(name, email, photo, password);
 
         createUser(email, password)
-            .then(() => {
+            .then((res) => {
                 const user = "User Created Successfully!"
                 setSuccess(user)
+                console.log("photo in reg: ", photo);
                 toast.success(user)
+                console.log(res.user);
+                updateProfile(res.user, {
+
+                    displayName: name,
+                    email: e.target.email.value,
+                    photoURL: photo
+
+                }).then(()=>{
+
+                })
             })
-            .catch(error => {
+            .catch(() => {
                 const errorMessage = error.message;
                 setError(errorMessage);
-                toast.error(errorMessage)
             })
+
+
 
     }
 
     return (
         <div className="max-w-[1440px] mx-auto min-h-[calc(100vh-80px-241px)] flex items-center">
 
-            <div className="grid grid-cols-2 lg:mx-44 shadow-2xl shadow-sky-200">
+            <div className="grid md:grid-cols-2 lg:mx-44 shadow-2xl shadow-sky-200">
                 <div className="flex items-center">
                     <img className="w-[640px]" src="https://i.ibb.co/PmXBhFJ/sign-up.png" alt="" />
                 </div>
@@ -81,7 +95,7 @@ const Register = () => {
                     </div>
 
                     <div>
-                        <form onSubmit={handleRegister} className="flex flex-col rounded-xl md:px-12 py-16 relative">
+                        <form onSubmit={handleRegister} className="flex flex-col rounded-xl px-4 md:px-12 py-16 relative">
 
                             <label className="text-lg px-2 py-1 mt-2" htmlFor="name">Name</label>
                             <input className="bg-slate-100 px-6 py-3 placeholder-slate-500 border-0 focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1" type="text" name="name" id="name" placeholder="Enter your name" required/>
@@ -95,7 +109,7 @@ const Register = () => {
                             <label className="text-lg px-2 py-1 mt-2" htmlFor="email">Password</label>
                             <input className="bg-slate-100 px-6 py-3 placeholder-slate-500 border-0 focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1" type={showPassword ? 'password' : 'text'} name="password" id="password" placeholder="Enter your password" required/>
 
-                            <div onClick={() => setShowPassword(!showPassword)} className="absolute right-16 bottom-[180px]">
+                            <div onClick={() => setShowPassword(!showPassword)} className="absolute right-8 md:right-16 bottom-[180px]">
                                 {
                                     showPassword ? <FaEye className="text-[#2ed9ff]"></FaEye> : <FaEyeSlash className="text-[#28d8ff]"></FaEyeSlash>
                                 }
