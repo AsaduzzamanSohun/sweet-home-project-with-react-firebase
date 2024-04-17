@@ -26,19 +26,19 @@ const AuthProvider = ({ children }) => {
     };
 
     const gitHubUser = (provider) => {
-        setLoading();
+        setLoading(true);
         return signInWithPopup(auth, provider);
     };
 
     const logout = () => {
-        setLoading();
+        setLoading(true);
         return signOut(auth);
     };
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
-            setUser(currentUser)
-            setLoading(false)
+            setUser(currentUser);
+            setLoading(false);
 
         });
         return () => { unsubscribe() };

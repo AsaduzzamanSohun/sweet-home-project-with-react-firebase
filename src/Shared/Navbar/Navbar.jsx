@@ -8,6 +8,7 @@ const Navbar = () => {
 
     const { user, logout } = useContext(AuthContext);
 
+
     const navLogout = () => {
         logout()
             .then(() => {
@@ -16,7 +17,6 @@ const Navbar = () => {
             .catch();
     }
 
-    console.log("nav photo: ", user);
 
     const link = <>
 
@@ -73,7 +73,7 @@ const Navbar = () => {
                     <div className="flex items-center">
                         <img
                             className="w-12 md:w-16"
-                            src="https://i.ibb.co/KVxYBw4/dwelling-spot-3-D.gif"
+                            src="https://i.ibb.co/vJrKcZC/dwelling-spot-3-D-compressed.gif"
                             alt="" />
 
                         <p className=''>
@@ -97,8 +97,8 @@ const Navbar = () => {
                             "w-12 h-12 rounded-full hover:cursor-pointer ring-green-500 ring-4"
                             :
                             "w-12 h-12 rounded-full"}
-                        title={user ? user.displayName : ""}
-                        src={user ? user.photoURL : "https://i.ibb.co/9WfLbkH/user.png"} />
+                        title={user?.displayName ? user.displayName : ""}
+                        src={user ? user.photoURL  : "https://i.ibb.co/9WfLbkH/user.png"} />
 
                     {
 
