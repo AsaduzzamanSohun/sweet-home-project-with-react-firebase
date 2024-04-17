@@ -2,7 +2,6 @@
 
 Live: https://dwelling-spot.web.app/
 
-The react packages have been implemented:
 
 Features:
 * User can Upadate his/her info later.
@@ -11,7 +10,7 @@ Features:
 * Unique Card design with animation
 * Viewers only can scroll on the homepage. Access each section the user must have to login.
 
-
+The react packages have been implemented:
 * Animate.css
 * AOS
 * Sweiper Slider
