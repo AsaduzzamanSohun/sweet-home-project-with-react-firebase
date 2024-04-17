@@ -14,7 +14,6 @@ const Navbar = () => {
 
             })
             .catch();
-
     }
 
     console.log("nav photo: ", user);
@@ -51,7 +50,6 @@ const Navbar = () => {
                         Login
                     </Link>
             }
-
 
         </li>
     </>
@@ -98,9 +96,9 @@ const Navbar = () => {
                         className={user ?
                             "w-12 h-12 rounded-full hover:cursor-pointer ring-green-500 ring-4"
                             :
-                            "w-12 h-12 rounded-full"} title={user ? user.displayName : ""} src={user ?
-                                user.photoURL
-                                : "https://i.ibb.co/9WfLbkH/user.png"} />
+                            "w-12 h-12 rounded-full"}
+                        title={user ? user.displayName : ""}
+                        src={user ? user.photoURL : "https://i.ibb.co/9WfLbkH/user.png"} />
 
                     {
 
@@ -117,7 +115,6 @@ const Navbar = () => {
                                     Login Now!
                                 </button>
                             </Link>
-
                     }
 
                 </div>

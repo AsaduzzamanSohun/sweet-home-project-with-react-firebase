@@ -72,8 +72,6 @@ const AboutUs = () => {
                         Your dream home awaits!
                     </p>
                 </div>
-
-
             </div>
         </div>
     );

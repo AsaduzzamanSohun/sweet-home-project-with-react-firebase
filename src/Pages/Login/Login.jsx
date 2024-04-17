@@ -29,8 +29,6 @@ const Login = () => {
         const email = form.get("email");
         const password = form.get("password");
         e.target.reset();
-        console.log(email, password);
-
 
         loginUser(email, password)
             .then(res => {
@@ -111,9 +109,6 @@ const Login = () => {
                                         </div>
                                 }
 
-
-
-
                                 <div className="flex text-3xl justify-center gap-4 mt-4">
                                     <Link onClick={handleGoogleSignIn} to=""><FcGoogle className="hover:scale-110 duration-700" /></Link>
                                     <Link onClick={handleGitHubSignIn} to=""><FaGithub className="hover:scale-110 duration-700" /></Link>
@@ -125,17 +120,8 @@ const Login = () => {
 
                         </form>
                     </div>
-
-
-
-
-
                 </div>
-
             </div>
-
-
-
         </div>
     );
 };

@@ -10,7 +10,7 @@ const UpdateProfile = () => {
     console.log(user);
 
     // eslint-disable-next-line no-unused-vars
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(true)
 
     const [displayName, setDisplayName] = useState('');
     const [photoURL, setPhotoURL] = useState('');
@@ -27,7 +27,6 @@ const UpdateProfile = () => {
             email: email,
             photoURL: photoURL
         }).then(() => {
-            console.log('Profile updated successfully!');
             setLoading(false)
 
         }).catch(error => {
@@ -79,11 +78,7 @@ const UpdateProfile = () => {
                                 required
                             />
 
-
-
                             <label className="text-lg px-2 py-1 mt-2" htmlFor="photo">Photo URL</label>
-
-
                             <input
                                 className="bg-slate-100 px-6 py-3 placeholder-slate-500 border-0 focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1"
                                 onChange={(e) => setPhotoURL(e.target.value)}
@@ -96,19 +91,13 @@ const UpdateProfile = () => {
 
                             <div>
                                 <button
-                                    
                                     className="btn rounded-none bg-[#68E1FD] text-white font-semibold text-lg hover:bg-transparent hover:text-[#68E1FD] hover:border-[#68E1FD] duration-700 w-full mt-4">
                                     Update Profile
                                 </button>
                             </div>
 
-
-
-
                         </form>
                     </div>
-
-
 
                 </div>
 

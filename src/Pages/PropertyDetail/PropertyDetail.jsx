@@ -19,9 +19,6 @@ const PropertyDetail = () => {
         document.title = "Property Details"
     }, []);
 
-
-    console.log(id);
-
     return (
         <div data-aos="flip-left" className="max-w-[1440px] mx-auto min-h-[calc(100vh-80px-226px)] mt-6">
 
@@ -76,13 +73,10 @@ const PropertyDetail = () => {
                             </button>
                         </div>
                     </div>
-
-
                 </div>
             </div>
 
         </div>
-
     );
 };
 
