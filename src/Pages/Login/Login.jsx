@@ -1,9 +1,9 @@
 import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash, FaGithub } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 
@@ -11,10 +11,12 @@ const Login = () => {
 
     const { user, loginUser, googleUser, gitHubUser } = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
-    const [newUser, setNewUser] = useState(null);
 
     const notifySuccess = (success) => toast.success(success)
     const notifyError = (error) => toast.error(error)
+
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const handleLogin = e => {
         e.preventDefault();
@@ -31,15 +33,12 @@ const Login = () => {
                 const loggedUser = res.user;
                 notifySuccess("Login Successfully!");
                 console.log(loggedUser)
-                setNewUser(loggedUser)
+                navigate(location?.state ? location.state : "/")
             })
             .catch(() => {
 
                 notifyError("User not found")
             })
-
-
-
     }
 
     const handleGoogleSignIn = () => {
@@ -68,16 +67,7 @@ const Login = () => {
         <div className="max-w-[1440px] mx-auto min-h-[calc(100vh-80px-241px)] flex items-center">
 
             <div>
-{/* 
-                {
-                    user && <div className="text-center py-10 space-y-3 bg-slate-300">
 
-                        <img className="mx-auto rounded-full" src={newUser.photoURL} alt="" />
-                        <h3 className="text-2xl font-semibold">{newUser.displayName}</h3>
-                        <p className="font-extrabold">{newUser.email}</p>
-
-                    </div>
-                } */}
 
             </div>
 
@@ -124,7 +114,6 @@ const Login = () => {
                                         </div>
                                 }
 
-                                <ToastContainer></ToastContainer>
 
 
 

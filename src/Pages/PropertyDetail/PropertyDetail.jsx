@@ -19,7 +19,7 @@ const PropertyDetail = () => {
     console.log(id);
 
     return (
-        <div className="max-w-[1440px] mx-auto min-h-[calc(100vh-80px-265px)] mt-6">
+        <div data-aos="flip-left" className="max-w-[1440px] mx-auto min-h-[calc(100vh-80px-265px)] mt-6">
 
 
             <div className="grid md:grid-cols-2 lg:px-44 p-4 md:space-x-12">

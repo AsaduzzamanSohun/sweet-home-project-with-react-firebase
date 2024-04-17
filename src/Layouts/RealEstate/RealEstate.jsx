@@ -1,6 +1,10 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { FaLocationDot } from "react-icons/fa6";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 
 
@@ -9,7 +13,7 @@ const RealEstate = ({ realEstate }) => {
     const { id, image, estate_title, price, status, facilities, location } = realEstate;
 
     return (
-        <div className='md:w-[412px] m-2 md:m-0 border-2 transition-all'>
+        <div data-aos="fade-right" className='md:w-[412px] m-2 md:m-0 border-2 transition-all'>
             <div className='bg-gray-100'>
                 <img className='w-full h-64 hover:scale-105 transition-all duration-1000 overflow-hidden p-4' src={image} alt="" />
             </div>

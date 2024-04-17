@@ -18,6 +18,8 @@ const Navbar = () => {
 
     }
 
+    console.log("nav photo: ", user);
+
     const link = <>
 
         <li>
@@ -44,11 +46,11 @@ const Navbar = () => {
 
             {
                 user ?
-                    <Link to="/" onClick={navLogout} className="btn px-8 bg-[#5356FF] color-light hover:opacity-75 hover:rounded-3xl hover:bg-[#1D24CA] transition-all duration-500 text-xl">
+                    <Link to="/" onClick={navLogout} className="btn rounded-none px-8 bg-[#68E1FD] text-white font-semibold text-lg hover:bg-transparent hover:text-[#68E1FD] hover:border-[#68E1FD] duration-700 hover:rounded-3xl transition-all">
                         Logout
                     </Link>
                     :
-                    <Link to="/login" className="btn px-8 bg-[#5356FF] color-light hover:opacity-75 hover:rounded-3xl hover:bg-[#1D24CA] transition-all duration-500 text-xl">
+                    <Link to="/login" className="btn rounded-none px-8 bg-[#68E1FD] text-white font-semibold text-lg hover:bg-transparent hover:text-[#68E1FD] hover:border-[#68E1FD] duration-700 hover:rounded-3xl transition-all">
                         Login
                     </Link>
             }
@@ -56,12 +58,6 @@ const Navbar = () => {
 
         </li>
     </>
-
-
-
-  
-
-
 
     return (
         <nav className="bg-white max-w-[1440px] mx-auto">
@@ -98,8 +94,12 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end hidden md:inline-flex gap-2">
-                    <img alt="" className="w-12 rounded-full" src={user ?
-                        "https://i.ibb.co/RYZpjHj/pic.jpg"
+                    <img alt="" 
+                    className={user ? 
+                        "w-12 h-12 rounded-full hover:cursor-pointer ring-green-500 ring-4" 
+                        : 
+                        "w-12 h-12 rounded-full"} title={user ? user.displayName : ""} src={user ?
+                        user.photoURL
                         : "https://i.ibb.co/9WfLbkH/user.png"} />
 
                     {

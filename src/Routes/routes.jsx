@@ -7,11 +7,14 @@ import ContactUs from "../Pages/ContactUs/ContactUs";
 import PropertyDetail from "../Pages/PropertyDetail/PropertyDetail";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import PrivateRoutes from "./PrivateRoutes";
+import ErrorPage from "../Error/ErrorPage";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Root></Root>,
+        errorElement:<ErrorPage></ErrorPage>,
         children: [
             {
                 path: "/",
@@ -20,7 +23,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/update-profile",
-                element: <UpdateProfile></UpdateProfile>
+                element: <PrivateRoutes><UpdateProfile></UpdateProfile></PrivateRoutes>
             },
             {
                 path: "/about",
@@ -32,7 +35,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/:id',
-                element: <PropertyDetail></PropertyDetail>,
+                element: <PrivateRoutes><PropertyDetail></PropertyDetail></PrivateRoutes>,
                 loader: () => fetch('estates.json')
             },
             {

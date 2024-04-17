@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { updateProfile } from "firebase/auth";
 
@@ -16,6 +16,9 @@ const Register = () => {
 
     const [success, setSuccess] = useState('');
     const [error, setError] = useState('')
+
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const notify = (error) => toast.error( error);
 
@@ -59,7 +62,8 @@ const Register = () => {
                 const user = "User Created Successfully!"
                 setSuccess(user)
                 console.log("photo in reg: ", photo);
-                toast.success(user)
+                console.log(success);
+                toast.success(user);
                 console.log(res.user);
                 updateProfile(res.user, {
 
@@ -69,7 +73,9 @@ const Register = () => {
 
                 }).then(()=>{
 
-                })
+                });
+
+                navigate(location?.state ? location.state : "/" )
             })
             .catch(() => {
                 const errorMessage = error.message;
@@ -118,7 +124,6 @@ const Register = () => {
                             <div>
                                 <button className="btn rounded-none bg-[#68E1FD] text-white font-semibold text-lg hover:bg-transparent hover:text-[#68E1FD] hover:border-[#68E1FD] duration-700 w-full mt-4">Register</button>
                             </div>
-                            <ToastContainer />
 
                             <div className="text-center text-sm mt-4">
                                 <p>Already have an account? <Link className="font-bold text-[#68E1FD]" to="/login">Login</Link> now!</p>
@@ -139,3 +144,5 @@ const Register = () => {
 };
 
 export default Register;
+
+
