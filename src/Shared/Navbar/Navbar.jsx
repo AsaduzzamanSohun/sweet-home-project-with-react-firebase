@@ -1,13 +1,31 @@
 import { Link, NavLink } from "react-router-dom";
 import '../Navbar/Navbar.css'
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import 'react-toastify/dist/ReactToastify.css';
 
 const Navbar = () => {
 
     const { user, logout } = useContext(AuthContext);
+    const [loading, setLoading] = useState(true);
+    const [photoURL, setPhotoURL] = useState(null);
 
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            if (user && user.photoURL) {
+                setPhotoURL(user.photoURL);
+            } else {
+                setPhotoURL('https://i.ibb.co/9WfLbkH/user.png');
+            }
+            setLoading(false);
+        }, 1500); 
+
+        return () => clearTimeout(timer); 
+    }, [user]);
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
 
     const navLogout = () => {
         logout()
@@ -55,7 +73,7 @@ const Navbar = () => {
     </>
 
     return (
-        <nav className="bg-white max-w-[1440px] mx-auto">
+        <nav className="bg-white max-w-[1536px] mx-auto">
             <div className="navbar ">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -81,7 +99,13 @@ const Navbar = () => {
                                 SweetHome
                             </Link>
                         </p>
+
+
                     </div>
+
+
+
+
 
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -92,13 +116,13 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end hidden md:inline-flex gap-2">
-                    <img alt="image broken. Please reload"
+                    <img alt="refresh please. Image broken"
                         className={user ?
                             "w-12 h-12 rounded-full hover:cursor-pointer ring-green-500 ring-4"
                             :
                             "w-12 h-12 rounded-full"}
-                        title={user?.displayName ? user.displayName : ""}
-                        src={user ? user.photoURL  : "https://i.ibb.co/9WfLbkH/user.png"} />
+                        title={user ? user.displayName  : ""}
+                        src={photoURL} />
 
                     {
 
@@ -116,6 +140,20 @@ const Navbar = () => {
                                 </button>
                             </Link>
                     }
+
+
+
+                </div>
+
+                <div className="w-full flex justify-end items-start md:hidden">
+                    <img alt="refresh please. Image broken"
+                        className={user ?
+                            "w-10 h-10 rounded-full inline-flex hover:cursor-pointer ring-green-500 ring-4"
+                            :
+                            "w-10 h-10 rounded-full"}
+                        title={user?.displayName ? user.displayName : ""}
+                        src={user ? user.photoURL : "https://i.ibb.co/9WfLbkH/user.png"}
+                    />
 
                 </div>
             </div>

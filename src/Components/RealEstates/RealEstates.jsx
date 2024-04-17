@@ -17,7 +17,7 @@ const RealEstates = () => {
     }, [])
 
     return (
-        <div className='max-w-[1440px] mx-auto'>
+        <div className='max-w-[1536px] mx-auto'>
             <div className='flex justify-center text-6xl font-bold my-24'>
                 <TypeAnimation
                     className=' border-t-4 border-b-4 border-sky-600 '
@@ -32,10 +32,10 @@ const RealEstates = () => {
                 />
             </div>
 
-            <div>
+            <div className='flex justify-center items-center'>
 
 
-                <div className='grid md:grid-cols-3 gap-8 mb-24'>
+                <div className='grid md:grid-cols-2 xl:grid-cols-3 gap-8 mb-24'>
                     {
                         realEstateData.map(realEstate => <RealEstate
                             key={realEstate.id}

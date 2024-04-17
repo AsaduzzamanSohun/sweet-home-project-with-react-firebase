@@ -23,7 +23,7 @@ const PropertyDetail = () => {
         <div data-aos="flip-left" className="max-w-[1440px] mx-auto min-h-[calc(100vh-80px-226px)] mt-6">
 
 
-            <div className="grid md:grid-cols-2 lg:px-44 p-4 md:space-x-12">
+            <div className="grid md:grid-cols-1 xl:grid-cols-2 xl:px-44 p-4 xl:space-x-12">
 
                 <div className='bg-slate-200 border-2 transition-all flex flex-col justify-between h-full'>
                     <div>

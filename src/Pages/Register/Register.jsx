@@ -8,6 +8,9 @@ import { updateProfile } from "firebase/auth";
 
 const Register = () => {
 
+    useEffect(() => {
+        document.title = "Register"
+    }, []);
     const { createUser } = useContext(AuthContext)
 
     const [showPassword, setShowPassword] = useState(true);
@@ -19,10 +22,9 @@ const Register = () => {
     const navigate = useNavigate();
 
     const notify = (error) => toast.error(error);
+    const registerSuccess = (mes) => toast.success(mes);
 
-    useEffect(() => {
-        document.title = "Register"
-    }, []);
+
 
 
     const handleRegister = e => {
@@ -33,7 +35,6 @@ const Register = () => {
         const name = form.get("name");
         const email = form.get("email");
         const photo = form.get("photo")
-        console.log("photo: ", photo);
         const password = form.get("password");
 
         e.target.reset()
@@ -57,16 +58,14 @@ const Register = () => {
             return;
         }
 
-        console.log(name, email, photo, password);
+        // console.log(name, email, photo, password);
+
 
         createUser(email, password)
             .then((res) => {
                 const user = "User Created Successfully!"
                 setSuccess(user)
-                console.log("photo in reg: ", photo);
                 console.log(success);
-                toast.success(user);
-                console.log(res.user);
                 updateProfile(res.user, {
 
                     displayName: name,
@@ -75,8 +74,11 @@ const Register = () => {
 
                 }).then(() => {
 
+                }).catch((error) => {
+                    console.error(error);
                 });
 
+                registerSuccess(user);
                 navigate(location?.state ? location.state : "/")
             })
             .catch(() => {
@@ -84,10 +86,11 @@ const Register = () => {
                 setError(errorMessage);
             })
 
+
     }
 
     return (
-        <div className="max-w-[1440px] mx-auto min-h-[calc(100vh-80px-241px)] flex items-center">
+        <div className="max-w-[1536px] mx-auto min-h-[calc(100vh-80px-241px)] flex items-center">
 
             <div className="grid md:grid-cols-2 lg:mx-44 shadow-2xl shadow-sky-200">
                 <div className="flex items-center">

@@ -1,7 +1,7 @@
 
 const Footer = () => {
     return (
-        <footer className="py-6 bg-[#d4f4fa] dark:bg-gray-100 dark:text-gray-900">
+        <footer className="py-6 bg-[#e6fbff] dark:bg-gray-100 dark:text-gray-900">
             <div className="container px-6 mx-auto space-y-4 divide-y divide-sky-500 md:space-y-6 divide-opacity-50">
                 <div className="flex items-center justify-center">
                     <img className="w-12 md:w-16" src="https://i.ibb.co/vJrKcZC/dwelling-spot-3-D-compressed.gif" alt="" />
