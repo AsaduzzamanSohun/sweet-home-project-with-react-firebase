@@ -1,9 +1,19 @@
-# React + Vite
+## SweetHome
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live: https://dwelling-spot.web.app/
 
-Currently, two official plugins are available:
+The react packages have been implemented:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features:
+* User can Upadate his/her info later.
+* All data store ver securely by firebase.
+* User must have to login/register to see datails of properties.
+* Unique Card design with animation
+* Viewers only can scroll on the homepage. Access each section the user must have to login.
+
+
+* Animate.css
+* AOS
+* Sweiper Slider
+* Typing Animation
 # b9a9-real-estate-AsaduzzamanSohun
